@@ -1,16 +1,12 @@
-//instrução get para pegar o elemento e guardar na variável
 let inputAdultos = document.getElementById("adultos");
 let inputCriancas = document.getElementById("criancas");
 let inputDuracao = document.getElementById("duracao");
 
-//variavel para retornar o resultado
 let resultado = document.getElementById("resultado");
 
-//define a função do botão calcular
 function calcular (){
   console.log("Calculando...");
 
-   //instrução para captar somente os valores dos campos
   let adultos  = inputAdultos.value;
   let criancas  = inputCriancas.value;
   let duracao  = inputDuracao.value;
@@ -21,13 +17,11 @@ function calcular (){
 
   let qtdTotalBebida = (bebidaPP(duracao) * adultos) + (bebidaPP(duracao)/2 * criancas)
 
-
   resultado.innerHTML = `<p> ${Math.ceil(qtdTotalBolo/1000)} kg de bolo</p>`;
 
   resultado.innerHTML += `<p> ${Math.ceil(qtdTotalSalgado/100)} de centos de salgado </p>`;
 
   resultado.innerHTML += `<p> ${Math.ceil(qtdTotalBebida/2000)} garrafas de bebida (2L) </p>`;
-
 
 }
 
